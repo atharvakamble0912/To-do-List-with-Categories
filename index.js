@@ -24,17 +24,18 @@ function todomain() {
 
         let liElem = document.createElement("li");
         liElem.innerHTML = inputval;
+
         let spanElem = document.createElement("span");
-        spanElem.innnerText = "delete"
+        spanElem.innerText = "delete"
         spanElem.className = "material-symbols-outlined";
         
-        liElem.addEventListener("dblclick", deleteItem, false);
+        liElem.addEventListener("click", deleteItem, false);
         liElem.appendChild(spanElem);
 
         ulElem.appendChild(liElem);
 
         function deleteItem() {
-            this.remove();
+            liElem.remove(); 
         }
     }
 }
